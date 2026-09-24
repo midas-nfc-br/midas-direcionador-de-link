@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Midas - Abrindo Instagram</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding-top: 80px;
+      padding: 70px 20px;
       background: #111;
       color: white;
     }
 
     button {
-      padding: 15px 25px;
+      padding: 16px 25px;
       font-size: 18px;
-      border: none;
+      border: 0;
       border-radius: 10px;
       cursor: pointer;
     }
@@ -28,20 +27,20 @@
 <body>
 
   <h2>Abrindo Instagram...</h2>
-  <p>Se o Instagram não abrir automaticamente:</p>
+  <p>Se o aplicativo não abrir automaticamente:</p>
 
   <button onclick="abrirInstagram()">
     Abrir Instagram
   </button>
 
   <script>
-    const usuario = "Bruno_Grecillo";
+    const usuario = "bruno_grecillo";
 
     const instagramApp =
       "instagram://user?username=" + usuario;
 
     const instagramWeb =
-      "https://www.instagram.com/" + usuario + "/";
+      "https://www.instagram.com/bruno_grecillo/";
 
     function abrirInstagram() {
       window.location.href = instagramApp;
@@ -51,9 +50,9 @@
       }, 2000);
     }
 
-    setTimeout(function () {
-      abrirInstagram();
-    }, 500);
+    window.addEventListener("load", function () {
+      setTimeout(abrirInstagram, 500);
+    });
   </script>
 
 </body>
