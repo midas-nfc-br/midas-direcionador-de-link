@@ -3,25 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abrindo Instagram...</title>
 
-  <script>
-    window.onload = function () {
-      const app = "instagram://user?username=Bruno_Grecillo";
-      const web = "https://www.instagram.com/Bruno_Grecillo/";
+  <title>Midas - Abrindo Instagram</title>
 
-      window.location.href = app;
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+      background: #111;
+      color: white;
+    }
 
-      setTimeout(function () {
-        window.location.href = web;
-      }, 1500);
-    };
-  </script>
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
-  <p>Abrindo Instagram...</p>
+
+  <h2>Abrindo Instagram...</h2>
+  <p>Se o Instagram não abrir automaticamente:</p>
+
+  <button onclick="abrirInstagram()">
+    Abrir Instagram
+  </button>
+
+  <script>
+    const usuario = "Bruno_Grecillo";
+
+    const instagramApp =
+      "instagram://user?username=" + usuario;
+
+    const instagramWeb =
+      "https://www.instagram.com/" + usuario + "/";
+
+    function abrirInstagram() {
+      window.location.href = instagramApp;
+
+      setTimeout(function () {
+        window.location.href = instagramWeb;
+      }, 2000);
+    }
+
+    setTimeout(function () {
+      abrirInstagram();
+    }, 500);
+  </script>
+
 </body>
 </html>
-
-<!-- Midas -->
