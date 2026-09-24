@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abrindo Instagram...</title>
+
+  <script>
+    window.onload = function () {
+      const app = "instagram://user?username=Bruno_Grecillo";
+      const web = "https://www.instagram.com/Bruno_Grecillo/";
+
+      window.location.href = app;
+
+      setTimeout(function () {
+        window.location.href = web;
+      }, 1500);
+    };
+  </script>
+</head>
+
+<body>
+  <p>Abrindo Instagram...</p>
+</body>
+</html>
